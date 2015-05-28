@@ -1,0 +1,7 @@
+<% if @contact.errors.blank? %>
+  $('#contact-modal').modal('hide');
+  $('table tbody').append('<%= j render "contact_row", contact: @contact %>');
+<% else %>
+  // TODO: show the errors in the UI
+  alert('Algo falló');
+<% end %>

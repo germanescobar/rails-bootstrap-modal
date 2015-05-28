@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Contacts</h1>
+      <div class="text-right">
+        <%= link_to "New Contact", new_contact_path, remote: true, class: "btn btn-primary" %>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @contacts.each do |contact| %>
+            <%= render 'contact_row', contact: contact %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
